@@ -1,0 +1,73 @@
+Executive Summary
+
+Over a 24-month period, this project analyzed multi-channel marketing data for a fashion brand across Facebook Ads, Google Ads, Email, SMS, Influencer Marketing, and Organic Content.
+Key performance indicators included ROI, CAC, LTV, LTV:CAC ratio, CTR, CPM, CPC, and Conversion Rate.
+
+Historical results show that paid channels drive consistent customer acquisition volume, while owned and organic channels provide superior efficiency per dollar spent. Forecast models suggest that Organic Content will continue compounding and could surpass at least one paid channel in ROI efficiency within the next two years. Email and SMS remain dependable channels for customer lifetime value and retention.
+
+
+
+Business Question
+
+Which marketing channels generate the highest long-term return (ROI and LTV) relative to acquisition cost, and how are these returns expected to evolve over the next two years?
+
+
+
+Data and Scope
+	•	Channels: Facebook Ads, Google Ads, Email, SMS, Influencer Marketing, Organic Content
+	•	Time Frame: Monthly data covering 24 months
+	•	Source Tables: channel_spend, sales_revenue, customer_ltv, influencer_breakdown
+	•	Merged View: Combined dataset (merged_table) keyed by month and channel
+	•	Core Metrics: ROI, CAC, LTV, LTV:CAC, CTR, CPC, CPM, Conversion Rate
+
+
+
+Methodology
+	1.	Data Preparation: Standardized date formats and channel names, then merged all data sources into a unified analytical table.
+	2.	KPI Calculation: Recalculated ROI as (Revenue − Spend)/Spend and LTV:CAC as AvgLTV/CAC to ensure internal consistency.
+	3.	Exploratory Analysis: Ranked channels by average ROI and LTV:CAC ratios; analyzed conversion funnels from impressions to purchases.
+	4.	Visualization: Plotted monthly ROI trends by channel to identify seasonal patterns and performance shifts.
+	5.	Forecasting: Trained individual linear regression models per channel using month index → ROI relationships to project 24 months ahead and visualize future ROI trajectories.
+
+
+
+Key Findings
+	•	Paid Channels: Deliver scalable acquisition volume but variable efficiency. Facebook and Google maintain stable reach but are highly sensitive to CPM and CPC fluctuations.
+	•	Owned Channels: Email and SMS exhibit strong LTV:CAC ratios and predictable retention, making them the most cost-effective channels for sustaining long-term customer value.
+	•	Influencer Marketing: Produces strong short-term spikes in performance, though results vary widely depending on creator fit, content quality, and audience relevance.
+	•	Organic Content: Demonstrates consistent growth over time. While slower to build initially, ROI strengthens steadily as brand engagement and awareness compound.
+
+In summary, an optimal allocation strategy should maintain paid channels for scale, emphasize owned channels for profitability, and invest consistently in organic content to maximize long-term efficiency and brand equity.
+
+
+
+Forecast (Next 24 Months)
+	•	Organic Content is projected to continue its upward trend in ROI, potentially surpassing at least one paid channel in efficiency if engagement growth persists.
+	•	Email and SMS will remain the foundation of profitability, sustaining strong LTV:CAC ratios with moderate growth.
+	•	Google Ads and Facebook Ads are expected to maintain scale but will require creative optimization and cost-control strategies to prevent ROI decline.
+	•	Influencer Marketing retains growth potential but should be executed selectively with creators demonstrating proven alignment and performance history.
+
+
+
+Recommendations
+	1.	Reallocate 10–20% of the paid advertising budget toward Organic Content and Influencer Marketing to capture compounding returns while preserving paid reach.
+	2.	Strengthen retention efforts by expanding Email and SMS lifecycle campaigns (welcome, post-purchase, win-back) to increase LTV and stabilize CAC.
+	3.	Optimize paid channel efficiency by refreshing ad creatives quarterly, refining targeting, and testing new bid strategies to defend ROI.
+	4.	Implement stricter influencer selection criteria based on brand alignment and verified past ROI performance.
+	5.	Improve measurement accuracy through standardized attribution windows, consistent tracking parameters, and monthly performance audits.
+
+
+
+Assumptions and Limitations
+	•	Forecasts are based on linear trends and do not account for seasonal effects, promotional spikes, or broader economic shifts.
+	•	Organic and influencer performance may be under-attributed due to last-click tracking limitations.
+	•	ROI projections may fluctuate with CPM/CPC inflation and creative fatigue; models should be reviewed quarterly for recalibration.
+KPI Reference (Glossary)
+	•	ROI: (Revenue − Spend) / Spend
+	•	CAC: Spend / New Customers
+	•	LTV: Avg total revenue per customer over lifetime (approx. retention × frequency × AOV)
+	•	LTV:CAC: LTV / CAC (>~3 is healthy)
+	•	CTR: Clicks / Impressions
+	•	CPC: Spend / Clicks
+	•	CPM: 1000 × Spend / Impressions
+	•	Conversion Rate: Purchases / Clicks
